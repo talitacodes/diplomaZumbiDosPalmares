@@ -1,0 +1,129 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background: #485C7D;
+  height: 80px;
+  margin: 0;
+}
+
+h1, h5, p, a {
+  font-family: 'Roboto';
+  color: #FFFFFF;
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #31415B;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  /* background-color: #111; */
+  color: #CF9941;
+  
+}
+
+#titulo {
+  background: #485C7D;
+  padding: 1em;
+}
+
+img{
+  width: 70%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 1%;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 1%;
+}
+
+hr.solid {
+  border-top: 4px solid #CF9941;
+  ;
+  overflow: hidden; 
+  padding: 0;
+  margin: 0;
+}
+
+#rodape1{
+  background-color: #31415B;
+  height: 80px;
+  overflow: hidden; 
+}
+p{
+  text-transform: uppercase;  
+}
+
+#rodape2{
+  background: #485C7D;
+  height: 80px;
+  overflow: hidden; 
+}
+/* FALE CONOSCO */
+
+.formulario {
+  display: grid;
+  padding: 58px;
+}
+
+#background-form {
+  width: 50vw;
+  height: 94vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #D9D9D9;
+
+}
+
+#form-name, #form-email, #comments{
+  font-family: 'Roboto';
+  width: 100%;
+  box-sizing: border-box; 
+  padding: 0.5em;
+  font-size: 1em;
+  border: 2px solid #333;
+  border-radius: 5px;
+  border-color: #D9D9D9;
+}
+
+#botao-enviar-formulario{
+
+}
