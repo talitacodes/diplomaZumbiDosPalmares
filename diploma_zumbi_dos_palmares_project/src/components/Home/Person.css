@@ -1,0 +1,26 @@
+.Person {
+  margin-bottom: 2vw;
+  /* padding: 2%; */
+  
+}
+
+.background-name{
+  background-color: #31415B;
+  height: vw;
+  overflow: hidden;
+  margin: 0;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  display: block;
+  flex-direction: column;
+
+
+}
+
+p{
+  justify-content: baseline;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}

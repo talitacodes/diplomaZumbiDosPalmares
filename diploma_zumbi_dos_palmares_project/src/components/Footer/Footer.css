@@ -1,0 +1,36 @@
+#rodape1{
+  background-color: #31415B;
+  height: 6vw;
+  overflow: hidden; 
+  padding: 0;
+  margin: 0;
+  align-content: center;
+  display: grid;
+}
+p{
+  text-transform: uppercase;  
+}
+
+#rodape2{
+  background: #485C7D;
+  height: 4vw;
+  overflow: hidden; 
+  padding: 0;
+  margin: 0;
+}
+
+hr{
+  border-top: 4px solid #CF9941;
+  overflow: hidden; 
+  padding: 0;
+  margin: 0;
+
+}
+
+footer{
+  margin-top: auto;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

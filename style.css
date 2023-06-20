@@ -8,7 +8,7 @@ header{
   margin: 0;
 }
 
-h1, h5, p, a {
+h1, h3, h5, p, a {
   font-family: 'Roboto';
   color: #FFFFFF;
   
@@ -126,4 +126,17 @@ p{
 
 #botao-enviar-formulario{
 
+}
+
+/* BIOGRAFIA */
+
+#biografia{
+  font-family: 'Roboto';
+  color: black;
+}
+
+#imagem-detalhes{
+  width: 20%;
+  margin: 0;
+  padding: 0;
 }

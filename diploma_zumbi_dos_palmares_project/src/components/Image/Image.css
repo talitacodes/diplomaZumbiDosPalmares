@@ -1,0 +1,10 @@
+.imageContainer {
+  margin: auto;
+}
+
+.image {
+  width: 100%;
+  margin: auto;
+  border-radius: 0.5vw;
+  border: 0.1vw solid #716A6A;
+}
