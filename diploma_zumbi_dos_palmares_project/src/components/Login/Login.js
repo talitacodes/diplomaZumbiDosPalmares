@@ -8,12 +8,18 @@ const Login = () => {
   const { authenticated } = useContext(UsersContext);
   return(
     <>
-     <Title title="Login"/>
+     <Title title= {!authenticated ? 'ENTRAR': 'MINHA CONTA'}/>
      <div className="Login">
         <div id="background-form">
           {
             authenticated ? 
-            <h3 className='Message'>O usuário foi autenticado com sucesso!</h3>:       
+            <div className='Logout'>  
+              <h3 className='Message'>Usuário autenticado com sucesso!</h3>
+              <button className='formButton' onClick={() => UsersCtx.userLogout()}>
+                Sair
+              </button>
+            </div>
+            :       
             <div>
               <form onSubmit={UsersCtx.authUser}>
                 <input type="email" placeholder="Email" id="email" required />

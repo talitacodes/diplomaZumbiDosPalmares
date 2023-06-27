@@ -1,10 +1,10 @@
-.Home{
+.Home, .Favorites{
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-.homeContent{
+.homeContent, .favoritesContent{
   margin: 1vw;;
 }
 

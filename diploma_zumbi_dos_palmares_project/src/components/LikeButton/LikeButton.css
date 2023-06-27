@@ -1,3 +1,10 @@
-button{
-  position: relative;
+.likeButton{
+  position: absolute;
+  background-color: transparent;
+  border: none;
+}
+
+.svg{
+  height: 2vw;
+  padding: 1vw;
 }

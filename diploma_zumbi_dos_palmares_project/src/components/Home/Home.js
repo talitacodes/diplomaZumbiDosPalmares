@@ -11,7 +11,7 @@ const Home = () => {
   return(
     <>
       <Title title="Homenageados"/>
-      <div className='homeContent' style={{columnCount: 3}}>
+        <div className='homeContent' style={{columnCount: 3}}>
           {peopleList.map((person) => {
             return (
               <div className='Home'>

@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
 import '../LikeButton/LikeButton.css'
-import { FavoritesContext } from '../../context/FavoritesProvider';
+import { PeopleListContext } from '../../context/PeopleListProvider';
+import likedSvg from '../../assets/heart-regular.svg';
+import likeSvg from '../../assets/heart-solid.svg';
+
 
 const LikeButton = (props) => {
-  // const [liked, setLiked] = useState(false);
-  // const { liked } = useContext(FavoritesContext);
-  const FavoritesCtx = useContext(FavoritesContext);
+
+  const FavoritesCtx = useContext(PeopleListContext);
   return (
-    <button onClick={() => FavoritesCtx.onFavorite(props.person)}>
-      {props.person.isFavorite ? '❤️' : '🤍'}
+    <button className='likeButton' onClick={() => FavoritesCtx.onFavorite(props.person)}>
+      {props.person.isFavorite ? <img className='svg' src={likeSvg} alt="Ícone SVG"/> : 
+      <img className='svg' src={likedSvg} alt="Ícone SVG"/>}
     </button>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useContext} from 'react';
-import './../Contact/Contact.css';
+import './../Forms/Contact.css';
 import Title from '../Title/Title';
 import {SearchContext} from '../../context/SearchProvider';
 import Person from '../Home/Person';

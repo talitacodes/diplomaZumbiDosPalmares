@@ -7,7 +7,6 @@ import ContactsFormProvider from './context/ContactFormProvider';
 import PeopleListProvider from './context/PeopleListProvider';
 import UsersProvider from './context/UsersProvider'
 import SearchProvider from './context/SearchProvider';
-import FavoritesProvider from './context/FavoritesProvider';
 
 function App() {
   return (
@@ -18,9 +17,7 @@ function App() {
             <ContactsFormProvider>
             <PeopleListProvider>
               <SearchProvider> 
-                <FavoritesProvider>
-                  <SysRoutes/>
-                </FavoritesProvider>
+                <SysRoutes/>
               </SearchProvider>
             </PeopleListProvider>
             </ContactsFormProvider>

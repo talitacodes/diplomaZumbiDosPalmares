@@ -44,6 +44,7 @@ const ContactsFormProvider = (props) => {
     try {
           const docRef = await addDoc(collection(db, "contactForm"), newContactForm);
           console.log(docRef);
+          alert("Comentário enviado com sucesso!");
           fetchContacts();
       } catch (error) {
           console.error('Error fetching collection: ', error);

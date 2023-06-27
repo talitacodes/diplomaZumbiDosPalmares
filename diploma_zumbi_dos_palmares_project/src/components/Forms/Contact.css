@@ -1,4 +1,4 @@
-.Contact, .Search, .Login, .Favorites{
+.Contact, .Search, .Login, .Favorites, .Logout{
   margin: 0;
   padding-top: 2vw;
   padding-bottom: 2vw;
@@ -21,7 +21,7 @@
   padding: 4vw;
 }
 
-#name, #email, #comments, #password{
+#name, #email, #comments, #password, #bio, #birthdate, #deathdate, #imageUrl{
   font-family: 'Roboto';
   width: 100%;
   box-sizing: border-box; 

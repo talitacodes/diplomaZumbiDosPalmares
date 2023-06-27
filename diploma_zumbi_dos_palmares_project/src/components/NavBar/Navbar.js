@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { UsersContext } from '../../context/UsersProvider'
 import './Navbar.css';
 const NavBar = () => {
-  const { authenticated } = useContext(UsersContext);
+  const { authenticated, isAdmin } = useContext(UsersContext);
   return(
     <header className="NavBar">
       <h5>PREFEITURA DE CAMPINAS | DIPLOMA ZUMBI DOS PALMARES 2023</h5>
@@ -24,11 +24,15 @@ const NavBar = () => {
             <NavLink to="/Contact">FALE CONOSCO</NavLink>
           </li>
           {
-            !authenticated ?
+            authenticated && isAdmin ?
             <li>
-            <NavLink to="/Login">ENTRAR</NavLink>
+            <NavLink to="/New">NOVO HOMENAGEADO</NavLink>
             </li>: null
           }
+       
+          <li>
+            <NavLink to="/Login">{!authenticated ? 'ENTRAR': 'MINHA CONTA'}</NavLink>
+          </li>
         </ul>
       </nav>
       <hr className="solid"/>
