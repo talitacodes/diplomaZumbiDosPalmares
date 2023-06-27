@@ -8,6 +8,10 @@ const UsersProvider = (props) => {
     const [authenticated, setAuthenticated] = useState(false);
 
     const authUser = (event) => {
+        console.log("funcao login");
+        console.log(event.target.email.value);
+        console.log(event.target.password.value);
+
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
@@ -19,9 +23,8 @@ const UsersProvider = (props) => {
                 setAuthenticated(true);
             })
             .catch((error) => {
-                // const errorCode = error.code;
-                // const errorMessage = error.message;
                 console.log('Problemas ao logar usuário', error);
+                alert('Problemas ao logar usuário', error);
                 setAuthenticated(false);
 
             });

@@ -6,7 +6,7 @@ const Person = (props) => {
   return (
     <div>
       <div className='Person'>
-        <Image imageUrl={props.person.imageUrl} />
+        <Image person={props.person} />
         <hr className="solid"/>
         <div className='background-name'><p>{props.person.name} {props.person.birthdate} - {props.person.deathdate}</p>
         

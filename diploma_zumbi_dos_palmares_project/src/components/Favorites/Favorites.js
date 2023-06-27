@@ -1,32 +1,30 @@
-import React from "react";
-import './Favorites.css';
+import React, { useContext} from "react";
+import { FavoritesContext } from "../../context/FavoritesProvider";
+import Title from '../Title/Title';
+import Person from "../Home/Person";
+import '../Login/Login.css'
+
 const Favorites = () => {
+
+  const { favorites } = useContext(FavoritesContext);
+
     return(
-      <div id="titulo">
-        <h1>Favoritos</h1>
-        <section>
-          <div className="row">
-            <div className="column">
-              <img src="./images/1.jpg" alt="pessoa"/>
-              <h4>KATARINA ALVES</h4>
+      <>
+        <Title title="Favoritos"/>
 
-            </div>
-            <div className="column">
-              <img src="./images/2.jpg" alt="pessoa"/>
-              <h4>ELISE COSTA</h4>
-
-            </div>
-            <div className="column">
-              <img src="./images/3.jpg" alt="pessoa"/>
-              <h4>LÚCIAN FERREIRA</h4>
-
-            </div>
-        </div>
-      </section>
-    </div>
+          {favorites.length != 0 ? favorites.map((fav) => {
+            return (
+              <div className='homeContent' style={{columnCount: 3}}>
+                <div className='Home'>
+                  <Person key={fav.id} person={fav}/>
+                </div>
+              </div>
+            );
+          }): <div className="Favorites"><div id="background-form"><h3 className='Message'>Nenhum favorito.</h3></div></div>}
+  
+    </>
  
-     
-    );
+  );
 };
 
 export default Favorites;

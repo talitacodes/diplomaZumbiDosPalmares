@@ -1,4 +1,4 @@
-.Contact, .Search{
+.Contact, .Search, .Login, .Favorites{
   margin: 0;
   padding-top: 2vw;
   padding-bottom: 2vw;
@@ -21,7 +21,7 @@
   padding: 4vw;
 }
 
-#name, #email, #comments, #senha{
+#name, #email, #comments, #password{
   font-family: 'Roboto';
   width: 100%;
   box-sizing: border-box; 

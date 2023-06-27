@@ -11,7 +11,7 @@ const SysRoutes = (props) => {
   return (
     <Routes>
       <Route path="/" element={<Home home={props.people} />} />
-      <Route path="/Favorites" element={<Favorites />} />
+      <Route path="/Favorites" element={<Favorites favorites={props.favorites}/>} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Search" element={<Search />} />

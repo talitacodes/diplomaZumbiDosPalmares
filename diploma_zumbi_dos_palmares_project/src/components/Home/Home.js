@@ -8,10 +8,10 @@ const Home = () => {
 
   const { peopleList } = useContext(PeopleListContext);
 
-    return(
-      <>
-        <Title title="Homenageados"/>
-        <div className='homeContent' style={{columnCount: 3}}>
+  return(
+    <>
+      <Title title="Homenageados"/>
+      <div className='homeContent' style={{columnCount: 3}}>
           {peopleList.map((person) => {
             return (
               <div className='Home'>

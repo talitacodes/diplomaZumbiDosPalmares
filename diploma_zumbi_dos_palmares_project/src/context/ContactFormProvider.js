@@ -21,8 +21,7 @@ const ContactsFormProvider = (props) => {
         contactsAux.push({ id: doc.id, ...doc.data() });
       });
       setContacts(contactsAux);
-      console.log(contactsAux);
-      console.log("testeeeeeeeee");
+
     } catch (error) {
       console.error('Error fetching collection: ', error);
     }
@@ -34,7 +33,6 @@ const ContactsFormProvider = (props) => {
 
 
   const onContactsFormSubmit = async (event) => {
-    console.log("testando formulario");
     event.preventDefault();
     console.log(event.target.name.value);
     const newContactForm = {

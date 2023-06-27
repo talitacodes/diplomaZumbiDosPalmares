@@ -20,23 +20,11 @@ const PeopleListProvider = (props) => {
     const [peopleList, setPeopleList] = useState([]);
     const [search, setSearch] = useState([]);
 
-    const onSearchSubmit = async (event) => {
-    
-        peopleList.forEach(function(item, i) {
-            console.log(item.name);
-            console.log(event.target.name.value);
-            if(item.name == event.target.name.value){
-                setSearch(item); 
-            }
-        });
-    }    
-
     const fetchPeopleList = async () => {
         const peopleListAux = [];
         try {
             const querySnapshot = await getDocs(collection(db, 'peopleList'));
             querySnapshot.forEach((doc) => {
-                console.log(`${doc.id} => ${doc.data()}`);
                 peopleListAux.push({ id: doc.id, ...doc.data() });
             });
             setPeopleList(peopleListAux);
@@ -48,12 +36,11 @@ const PeopleListProvider = (props) => {
 
     useEffect(() => {
         fetchPeopleList();
-        console.log("[PeopleProvider]");
     }, []);
 
 
     return (
-        <PeopleListContext.Provider value={{ peopleList: peopleList, onSearchSubmit: onSearchSubmit, search: search}}>
+        <PeopleListContext.Provider value={{ peopleList: peopleList}}>
             {props.children}
         </PeopleListContext.Provider>
     );

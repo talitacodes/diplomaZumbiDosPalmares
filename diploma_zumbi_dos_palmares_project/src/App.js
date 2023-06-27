@@ -6,6 +6,8 @@ import SysRoutes from './SysRoutes';
 import ContactsFormProvider from './context/ContactFormProvider';
 import PeopleListProvider from './context/PeopleListProvider';
 import UsersProvider from './context/UsersProvider'
+import SearchProvider from './context/SearchProvider';
+import FavoritesProvider from './context/FavoritesProvider';
 
 function App() {
   return (
@@ -15,7 +17,11 @@ function App() {
           <NavBar/>
             <ContactsFormProvider>
             <PeopleListProvider>
-              <SysRoutes/>
+              <SearchProvider> 
+                <FavoritesProvider>
+                  <SysRoutes/>
+                </FavoritesProvider>
+              </SearchProvider>
             </PeopleListProvider>
             </ContactsFormProvider>
         </UsersProvider>
